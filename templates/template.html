@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 cdn CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <!-- 引入我們自己的 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+    <!-- 可供更改的部分 -->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">人臉辨識系統</h1>
+        <strong>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <!-- 宣告一個可折疊的按鈕 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 導覽列 -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                人臉辨識實名制 </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{ url_for('index') }}">登錄畫面</a>
+                                <a class="dropdown-item" href="{{ url_for('data') }}">產品介紹</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">影像畫面</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('data') }}">詳細資訊</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </strong>
+    </div>
+</header>
+<main>
+    <!-- 可供更改的部分 -->
+    {% block main %}{% endblock %}
+</main>
+<!-- 希望能固定出現在每個網頁的 footer -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<!-- 可供更改的部分 -->
+{% block script %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends "template.html" %}
+{% block title %}詳細資料{% endblock %}
+
+
+{% block main %}
+<div class="w3-half w3-indigo w3-container" align="center" style="min-height:800px;">
+    <div class="w3-padding-64 w3-center "  align="center" >
+        <h2>Result</h2>
+        <div class="w3-container w3-responsive" align="center" >
+            <table width="500">
+                <tr style="font-size: 110%; text-align:left;">
+                    <td style="padding-left: 130px;">Time</td>
+                    <td style="padding-left: 140px;">Name</td>
+                </tr>
+            </table>
+
+            <table width="1400" style="position: absolute; top:220px;" >
+                <tr style="text-align:left; color: black;">
+                    <td style="position: absolute; left:550px;padding: 40px 0 40px 0">
+                        {% for t in user_time %}
+                        <p>{{ t | upper}} </p>
+                        {% endfor %}
+                    </td>
+                     <td style="position: absolute; left:850px; padding: 40px 0 40px 0">
+                        {% for user in users %}
+                        <p>{{ user | upper }}</p>
+                        {% endfor %}
+                    </td>
+                </tr>
+            </table>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+            <div style="width:560px; height:35px; background-color:#fff; border-radius: 20px; opacity: 1;"></div>
+
+            <div style="width:560px; height:35px; background-color:#708090;"></div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

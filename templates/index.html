@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% block title %}影像畫面{% endblock %}
+
+{% block main %}
+<div class="w3-row" align="center" >
+    <div class="w3-half w3-light-grey w3-center" style="min-height:1400px;" align="center" id="work">
+        <div class="w3-padding-64">
+            <h2 style="color:white"  align="center">Video Surveillance</h2>
+        </div>
+        <div class="w3-row">
+            <img style="width: 640px;height: 480px;" align="center" src="{{ url_for('video_feed') }}">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
